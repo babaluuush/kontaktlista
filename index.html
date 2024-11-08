@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,19 @@
 <body>
     <div class="container">
         <h1>Kontaktlista</h1>
-
+        
         <div class="new-contact">
-            <input type="text" id="nameInput" placeholder="Ange namn">
-            <input type="text" id="phoneInput" placeholder="Ange telefonnummer">
+            <input type="text" id="nameInput" class="name-input" placeholder="Ange namn">
+            <input type="text" id="phoneInput" class="phone-input" placeholder="Ange telefonnummer">
             <button id="createContactBtn">Skapa kontakt</button>
-            <button id="deleteAllbtn">Radera lista</button>
+            <button id="deleteAllBtn">Radera lista</button>
             <p id="errorMessage" class="error-message"></p>
         </div>
-
-        <div id="contactList" class="contact-list"></div>
+        
+        <div id="contactList" class="contact-list">
+        </div>
     </div>
 
     <script src="script.js"></script>
-    
 </body>
 </html>
