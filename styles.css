@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f0f8ff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,16 +14,22 @@ body {
 }
 
 .container {
-    background-color: #fff;
+    background-color: #ffe4b5;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    transition: background-color 0.3s ease;
+}
+
+.container:hover {
+    background-color: #ffdab9;
 }
 
 h1 {
     text-align: center;
     color: #333;
+    font-weight: bold;
 }
 
 .new-contact, .contact-list {
@@ -35,6 +41,30 @@ h1 {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
+}
+
+.new-contact input {
+    background-color: #ffffff;
+    border: 2px solid #ff7f50;
+}
+
+.new-contact input:focus {
+    outline: none;
+    border-color: #ffa07a;
+    box-shadow: 0 0 5px #ffa07a;
+}
+
+.new-contact button {
+    background-color: #1e90ff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+    background-image: linear-gradient(to right, #1e90ff, #ff69b4);
+}
+
+.new-contact button:hover {
+    background-color: #5a7cf0;
+    background-image: linear-gradient(to right, #5a7cf0, #ff69b4);
 }
 
 .error-message {
@@ -51,21 +81,21 @@ h1 {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #f9f9f9;
+    background-color: #ffefd5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .contact-fields {
     display: flex;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
 }
 
-.name-input {
+.name-input, .phone-input {
     width: 48%;
-}
-
-.phone-input {
-    width: 48%;
+    padding: 5px;
+    border: 2px solid #dda0dd;
+    border-radius: 4px;
 }
 
 .button-container {
@@ -76,6 +106,17 @@ h1 {
 
 .button-container button {
     width: 45%;
-    padding: 5px;
-    font-size: 0.9em;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4169e1;
+    background-image: linear-gradient(to right, #4169e1, #ff1493);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #5a7cf0;
+    background-image: linear-gradient(to right, #5a7cf0, #ff69b4);
 }
