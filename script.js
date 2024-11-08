@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const nameInput = document.getElementById("nameInput");
     const phoneInput = document.getElementById("phoneInput");
-    const createContactbtn = document.getElementById("createContactBtn");
+    const createContactBtn = document.getElementById("createContactBtn");
     const deleteAllBtn = document.getElementById("deleteAllBtn");
     const contactList = document.getElementById("contactList");
     const errorMessage = document.getElementById("errorMessage");
@@ -58,5 +58,30 @@ document.addEventListener("DOMContentLoaded", () => {
         errorMessage.style.display = "none";
     }
 
-    
-})
+    function toggleEdit(contactItem, nameField, phoneField, editBtn) {
+        if (nameField.disabled) {
+            nameField.disabled = false;
+            phoneField.disabled = false;
+            editBtn.textContent = "Spara";
+        } else {
+            const updatedName = nameField.value.trim();
+            const updatedPhone = phoneField.value.trim();
+            if (!updatedName || !updatedPhone) {
+                showError("Kontaktuppgifterna får ej vara tomma");
+                return;
+            }
+
+            nameField.disabled = true;
+            phoneField.disabled = true;
+            editBtn.textContent = "Ändra";
+            errorMessage.style.display = "none";
+        }
+    }
+
+    function deleteAllContacts() {
+        contactList.innerHTML = "";
+    }
+
+    createContactBtn.addEventListener("click", createContact);
+    deleteAllBtn.addEventListener("click", deleteAllContacts);
+});
