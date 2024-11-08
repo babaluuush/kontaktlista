@@ -69,9 +69,11 @@ h1 {
 
 .error-message {
     color: red;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     display: none;
+    padding-top: 10px;
+    font-weight: bold;
 }
 
 .contact-item {
