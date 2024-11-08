@@ -1,3 +1,5 @@
+// script.js
+
 document.addEventListener("DOMContentLoaded", () => {
     const nameInput = document.getElementById("nameInput");
     const phoneInput = document.getElementById("phoneInput");
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const phone = phoneInput.value.trim();
 
         if (!name || !phone) {
-            showError("Både namn och telefonnummer måste fyllas i.");
+            showError("Namn och telefonnummer måste fyllas i");
             return;
         }
 
@@ -81,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const updatedName = nameField.value.trim();
             const updatedPhone = phoneField.value.trim();
             if (!updatedName || !updatedPhone) {
-                showError("Kontaktuppgifter får ej vara tomma.");
+                showError("Kontaktuppgifter får ej vara tomma");
                 return;
             }
             nameField.disabled = true;
